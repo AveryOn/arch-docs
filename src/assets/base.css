@@ -1,0 +1,80 @@
+/* color palette */
+:root {
+    /* Foreground Colors */
+    --basic-fg: white;
+    --basic-light-fg: rgba(255, 255, 255, 0.700);
+    --basic-light-fg-2: rgba(255, 255, 255, 0.550);
+    --basic-hover-fg: rgb(212, 251, 255);
+    --colorful-fg: #354c6f;
+    --colorful-hover-fg: #354c6f;
+
+    /* Background Colors */
+    --basic-layer-bg: white;
+    --colorful-bg: #2b3e5c;
+    --colorful-bg-2: #2277ff31;
+}
+
+/* semantic color variables for this project */
+:root {
+    /* BASE */
+    --main-anim-duration: 0.5s;
+    --font: "Sniglet", system-ui;
+
+    /* HEADER */
+    --header-width: auto;
+    --header-heigth: 40px;
+    --header-font-size: 20px;
+    --header-text-fg: var(--colorful-fg) !important;
+    --header-bg: var(--colorful-bg-2) !important;
+
+    /* MAIN */
+    --main-bg: var(--basic-layer-bg) !important;
+
+    /* ASIDE */
+    --aside-width: 300px;
+    --aside-height: 100vh;
+    --aside-border-color: rgba(176, 176, 176, 0.387);
+    --aside-top-fg: var(--basic-light-fg) !important;
+    --aside-toggle-lang-fg: var(--basic-light-fg) !important;
+    --aside-toggle-lang-hover-fg: var(--basic-light-fg-2) !important;
+
+    /* FOOTER */
+    --footer-width: auto;
+    --footer-heigth: 60px;
+    --footer-fg: var(--basic-fg) !important;
+    --footer-hover-fg: var(--basic-hover-fg) !important;
+    --footer-font-size: 11px;
+}
+
+.theme-dark {
+    --colorful-bg-2: rgb(215, 215, 215) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+    transition: color var(--main-anim-duration), background-color var(--main-anim-duration);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    line-height: 1.6;
+    font-family: "Sniglet", system-ui;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+    width: 100%;
+}
